@@ -9,11 +9,11 @@ def search_top():
 
     dic = response.json()  # パース
 
-    number = []
-    for numbers in range(0, 50):
-        number.append(dic[numbers])
+    numbers = []
+    for number in range(0, 50):
+        numbers.append(dic[number])
 
-    return number
+    return numbers
 
 
 def get_info(number):
@@ -31,7 +31,7 @@ def get_info(number):
 
         if "url" in dic:
             url = dic["url"]
-            print(f"'title': '{title}', 'url': '{url}'")
+            print(f"'title': '{title}', 'link': '{url}'")
 
         else:
             print(f"'title': {title}")
@@ -49,8 +49,8 @@ def get_info(number):
 
 def main():
 
-    number = search_top()
-    get_info(number)
+    numbers = search_top()
+    get_info(numbers)
 
 
 if __name__ == "__main__":
