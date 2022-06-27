@@ -16,9 +16,9 @@ def search_top():
     return numbers
 
 
-def get_info(number):
+def get_info(numbers):
 
-    for r in number:
+    for r in numbers:
         article_number = r
         response = requests.get(
             f"https://hacker-news.firebaseio.com/v0/item/{article_number}.json?print=pretty"
