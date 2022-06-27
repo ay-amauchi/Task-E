@@ -36,6 +36,7 @@ def get_info(number):
         else:
             print(f"'title': {title}")
 
+        # 備忘このやり方も調べたい。
         # try:
         #     dic["url"]
         # except KeyError:
